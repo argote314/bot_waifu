@@ -1,0 +1,217 @@
+// menu fitur bot
+const help = (prefix, instagram, yt, name, pushname2, user, limitt, uptime, jam, tanggal) => { 
+	return `
+	
+┌──────「 *NATSUMI-BOT* 」
+│
+├◪ *NOMBRE DE USUARIO* : *${pushname2}*
+├◪ *LIMIT* : *${limitt} POR DIA*
+├◪ *Hora* : *${jam}*
+├◪ *FECHA* : *${tanggal}*
+├◪ *VERSION* : *4*
+├◪ *USUARIOS REGISTRADOS* : *${user.length}*
+│
+└─────────────────────
+
+
+┌──────「 *ACERCA* 」
+│
+├◪ *${prefix}info*
+├◪ *${prefix}creador*
+├◪ *${prefix}speed*
+├◪ *${prefix}daftar*
+├◪ *${prefix}limit*
+├◪ *${prefix}totaluser*
+├◪ *${prefix}blocklist*
+│
+├──────「 *EDITS* 」
+│
+├◪ *${prefix}quotemaker texto/texto/random*
+├◪ *${prefix}coffe texto*
+├◪ *${prefix}love texto*
+├◪ *${prefix}glow texto*
+├◪ *${prefix}bpink texto*
+├◪ *${prefix}3d texto*
+├◪ *${prefix}tlight texto*
+├◪ *${prefix}lighttext texto*
+├◪ *${prefix}crismes texto*
+├◪ *${prefix}goldbutton texto*
+├◪ *${prefix}silverbutton texto*
+├◪ *${prefix}leavest texto*
+├◪ *${prefix}phlogo texto/texto
+├◪ *${prefix}glitch texto/texto/b*
+├◪ *${prefix}tts es texto*
+├◪ *${prefix}stiker*
+├◪ *${prefix}gifstiker*
+├◪ *${prefix}toimg*
+│
+├───────「 *DESCARGAS* 」
+│
+├◪ *${prefix}joox Nombre msc*
+├◪ *${prefix}randomkpop*
+│
+├───────「 *GRUPOS* 」
+│
+├◪ *${prefix}antilink 1/0*
+├◪ *${prefix}grup 1/0*
+├◪ *${prefix}setpp*
+├◪ *${prefix}infogc*
+├◪ *${prefix}modeanime 1/0
+├◪ *${prefix}naruto*
+├◪ *${prefix}minato*
+├◪ *${prefix}boruto*
+├◪ *${prefix}hinata*
+├◪ *${prefix}sakura*
+├◪ *${prefix}sasuke*
+├◪ *${prefix}toukachan*
+├◪ *${prefix}rize*
+├◪ *${prefix}akira*
+├◪ *${prefix}itori*
+├◪ *${prefix}kurumi*
+├◪ *${prefix}miku*
+├◪ *${prefix}anime*
+├◪ *${prefix}animecry*
+├◪ *${prefix}animekiss*
+├◪ *${prefix}add +58xxxxxxxxxx*
+├◪ *${prefix}kick @mentioned*
+├◪ *${prefix}promote @mencionar*
+├◪ *${prefix}demote @mencionar*
+├◪ *${prefix}setname*
+├◪ *${prefix}setdesc*
+├◪ *${prefix}linkgrup*
+├◪ *${prefix}tagme*
+├◪ *${prefix}tagall*
+├◪ *${prefix}mentionall*
+├◪ *${prefix}listadmin*
+│
+├───────「 *ADMIN* 」
+│
+├◪ *${prefix}nsfw 1/0*
+├◪ *${prefix}nsfwloli*
+├◪ *${prefix}nsfwblowjob*
+├◪ *${prefix}nsfwneko*
+├◪ *${prefix}nsfwtrap*
+├◪ *${prefix}hentai*
+├◪ *${prefix}bott 1/0*
+│
+├──────「 *OTROS* 」
+│
+├◪ *${prefix}perrito*
+├◪ *${prefix}bpfont texto*
+├◪ *${prefix}textstyle texto*
+├◪ *${prefix}lirik nombre msc*
+├◪ *${prefix}map Pais o Ciudad*
+├◪ *${prefix}playstore aplicacion name*
+├◪ *${prefix}readmore texto/texto*
+├◪ *${prefix}moddroid aplicacion name*
+├◪ *${prefix}apkpure aplicacion name*
+│
+├─────────「 *CREADOR* 」
+│
+├◪ *${prefix}setlimit*
+├◪ *${prefix}setprefix*
+├◪ *${prefix}setnamebot*
+├◪ *${prefix}setppbot*
+├◪ *${prefix}bc*
+├◪ *${prefix}bcgc*
+├◪ *${prefix}ban*
+├◪ *${prefix}unban*
+├◪ *${prefix}block*
+├◪ *${prefix}unblock*
+├◪ *${prefix}clearall*
+├◪ *${prefix}delete*
+├◪ *${prefix}getses*
+├◪ *${prefix}leave*
+│
+└──────── *「⏤͟͟͞͞ঔৣ⃟͠քα℘𝖎 ƈơทʄuꫂ〆᭄」*
+`
+}
+
+exports.help = help
+
+// penghitung aktif bot
+function kyun(seconds){
+  function pad(s){
+    return (s < 10 ? '0' : '') + s;
+  }
+  var hours = Math.floor(seconds / (60*60));
+  var minutes = Math.floor(seconds % (60*60) / 60);
+  var seconds = Math.floor(seconds % 60);
+  return `*${pad(hours)} Jam ${pad(minutes)} Menit ${pad(seconds)} Detik*`
+}
+
+
+// bahasa list
+const bahasa = (prefix) => {
+return `
+List Bahasa Untuk Command *${prefix}tts*
+
+  af: Afrikaans
+  sq: Albanian
+  ar: Arabic
+  hy: Armenian
+  ca: Catalan
+  zh: Chinese
+  zh-cn: Chinese (Mandarin/China)
+  zh-tw: Chinese (Mandarin/Taiwan)
+  zh-yue: Chinese (Cantonese)
+  hr: Croatian
+  cs: Czech
+  da: Danish
+  nl: Dutch
+  en: English
+  en-au: English (Australia)
+  en-uk: English (United Kingdom)
+  en-us: English (United States)
+  eo: Esperanto
+  fi: Finnish
+  fr: French
+  de: German
+  el: Greek
+  ht: Haitian Creole
+  hi: Hindi
+  hu: Hungarian
+  is: Icelandic
+  id: Indonesian
+  it: Italian
+  ja: Japanese
+  ko: Korean
+  la: Latin
+  lv: Latvian
+  mk: Macedonian
+  no: Norwegian
+  pl: Polish
+  pt: Portuguese
+  pt-br: Portuguese (Brazil)
+  ro: Romanian
+  ru: Russian
+  sr: Serbian
+  sk: Slovak
+  es: Spanish
+  es-es: Spanish (Spain)
+  es-us: Spanish (United States)
+  sw: Swahili
+  sv: Swedish
+  ta: Tamil
+  th: Thai
+  tr: Turkish
+  vi: Vietnamese
+  cy: Welsh
+`
+}
+exports.bahasa = bahasa
+
+
+// Limit
+const limitend = (pushname2) => {
+        return`*perdon ${pushname2} Tu límite de hoy se acabó\n\n Por favor vuelve mañana:)\n\n Si eres chica puedes hacer un zing que diga Confu<3 y enviarmelo al privado asi mi creador podria restaurar tu limite y continuar usandome sin tener que esperar😉*`
+}
+
+const limitcount = (limitCounts) => {
+        return`
+Limit Kamu: ${limitCounts}
+`
+}
+
+exports.limitend = limitend
+exports.limitcount = limitcount

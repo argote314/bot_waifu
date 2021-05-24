@@ -1,1 +1,2 @@
-# bot_waifu
+# botwasapv7
+This fix after baileys update
